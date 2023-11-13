@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
 
 
 
 const NavBar = () => {
 
     const navOptions = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 1</a></li>
-        <li><a>Item 1</a></li>
-        <li><a>Item 1</a></li>
+        <Link to="/"><li className="mr-5">Home</li></Link>
+        <Link to="/menu"><li className="mr-5">Our Menu</li></Link>
+        <Link to="/order/salad"><li className="mr-5">Order Food</li></Link>
+        <Link to="/dashboard"><li className="mr-5">Dashboard</li></Link>
+        <Link to="contactUs"><li className="mr-5">Contact Us</li></Link>
     </>
 
     return (
@@ -21,7 +23,12 @@ const NavBar = () => {
                         {navOptions}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+
+                <div className="flex flex-col justify-center items-center">
+                    <h2 className=" text-2xl uppercase">Bistro Boss</h2>
+                    <p>R  e  s  t  a  u  r  a  n  t</p>
+                </div>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
